@@ -1,0 +1,375 @@
+#main main .container-buttons {
+    display: flex;
+    width: 220px;
+    height: 70px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.163);
+    margin: 50px 15px 25px 20px;
+    cursor: pointer;
+
+}
+
+.container-buttons .btn {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* -/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/ */
+/* -/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/ */
+/* -/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/ */
+/* -/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/ */
+/* -/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/ */
+/* BUTTON LOGO - Hover */
+#main main .container-buttons:nth-child(1) {
+    box-shadow: none
+}
+
+
+.outer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#14ffe9, #ffeb3b, #ff0030);
+    animation: btn-hover 1.5s linear infinite;
+}
+
+.button {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+}
+
+.cicle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50px;
+}
+
+.outer button,
+.outer span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.outer button {
+    background: #111;
+    color: #f2f2f2;
+    overflow: none;
+    border: none;
+    font-size: 20px;
+    z-index: 1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.button button {
+    height: 60px;
+    width: 210px;
+    border-radius: 50px;
+}
+
+.outer span {
+    height: 100%;
+    width: 100%;
+    background: inherit;
+}
+
+.button span {
+    border-radius: 50px;
+}
+
+.outer span:nth-child(1) {
+    filter: blur(7px);
+}
+
+.outer span:nth-child(2) {
+    filter: blur(14px);
+}
+
+.outer {}
+
+@keyframes btn-hover {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+/* -/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/ */
+/* -/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/ */
+/* -/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/ */
+/* -/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/ */
+/* -/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/ */
+/* BUTTON LOGO - Hover */
+#main main .container-buttons:nth-child(2) {
+    box-shadow: none;
+    background: var(--color-bg);
+    position: relative;
+    box-sizing: border-box;
+}
+
+
+:root {
+    /*HSL se refiere a "Hue, Saturation, Lightness" (Matiz, Saturación, Luminosidad) */
+    --clr-neon: hsl(317 100% 54%);
+    --clr-bg: hsl(323 21% 16%);
+
+}
+
+
+.neon {
+    font-family: "Balsamiq Sans", cursive;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var(--color-bg);
+    position: relative;
+
+}
+
+.neon-button {
+    font-size: 2rem;
+
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--clr-neon);
+    border: var(--clr-neon) 0.125em solid;
+    padding: 5px 60px;
+    border-radius: 0.25em;
+
+    text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em currentColor;
+
+    box-shadow: inset 0 0 0.5em 0 var(--clr-neon), 0 0 0.5em 0 var(--clr-neon);
+
+    position: relative;
+}
+
+.neon-button::before {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    background: var(--clr-neon);
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+    filter: blur(1em);
+    opacity: 0.7;
+}
+
+.neon-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 2em 0.5em var(--clr-neon);
+    opacity: 0;
+    background-color: var(--clr-neon);
+    z-index: -1;
+    transition: opacity 100ms linear;
+}
+
+.neon-button:hover,
+.neon-button:focus {
+    color: var(--clr-bg);
+    text-shadow: none;
+}
+
+.neon-button:hover::before,
+.neon-button:focus::before {
+    opacity: 1;
+}
+
+.neon-button:hover::after,
+.neon-button:focus::after {
+    opacity: 1;
+}
+/* -/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/ */
+/* -/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/ */
+/* -/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/ */
+/* -/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/ */
+/* -/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/ */
+/* BUTTON LOGO - boton */
+#main main .container-buttons:nth-child(3) {
+    border-radius: 50%;
+    box-shadow: none;
+}
+.boton {
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+    background: #141414;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all .3s ease;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    
+}
+.boton span {
+    position: relative;
+    z-index: 2;
+    transition: .3s ease all;
+}
+.boton:hover span {
+    color: #323232;
+    font-weight: 600;
+}
+.boton.uno::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #fee502;
+    position: absolute;
+    z-index: 1;
+    top: -80px;
+    left: 0;
+    transition: .25s ease-in-out all;
+}
+.boton.uno:hover::after {
+    top: 0;
+}
+/* -/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/ */
+/* -/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/ */
+/* -/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/ */
+/* -/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/ */
+/* -/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/ */
+/* BUTTON LOGO - botondos */
+#main main .container-buttons:nth-child(4) {
+    border-radius: 50%;
+    box-shadow: none;
+}
+.wrapper {
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #141414; */
+    height: 100%;
+    width: 100%;
+}
+.wrapper a{
+    position: relative;
+    display: inline;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #03e9f4;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: .5s; overflow: hidden;
+    height: 100%;
+    width: 100%;
+    line-height: 70px;
+}
+.wrapper a:hover {
+    background-color: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 80px #03e9f4;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005) ;
+}
+.wrapper a:first-child {
+    filter: hue-rotate(225deg);
+}
+/* .wrapper a:last-child {
+    filter: hue-rotate(90deg);
+} */
+.wrapper a span{
+    position: absolute;
+    display: block;
+}
+.wrapper a span:nth-child(1){
+    top: 0;
+    left:100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: animate-line-1  1s infinite;
+}
+
+/* Aniamcion */
+@keyframes animate-line-1{
+    0%{
+        left: -100%;
+    }
+    100%{
+        left:100%
+    }
+}
+.wrapper a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: animate-line-2 1s infinite;
+    animation-delay:  .25s;
+}
+@keyframes animate-line-2{
+    0%{
+        top: -100%;
+    }
+    100%{
+        top: 100%
+    }
+}
+.wrapper a span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: animate-line-3 1s infinite;
+    animation-delay:  .5s;
+}
+@keyframes animate-line-3{
+    0%{
+        right: -100%;
+    }
+    100%{
+        right: 100%;
+    }
+}
+.wrapper a span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: animate-line-4 1s infinite;
+    animation-delay:  .75s;
+}
+@keyframes animate-line-4{
+    0%{
+        bottom:-100%;
+    }
+    100%{
+        bottom: 100%;
+    }
+}
